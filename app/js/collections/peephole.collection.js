@@ -1,14 +1,12 @@
-;( function (){
+;(function (){
 
   'use strict';
 
-  app.Collections.Peephole = new Backbone.Collection.extend ({
+  app.Collection.Peephole = new Backbone.Collection.extend ({
 
-    model: app.Models.Peephole,
+    model: app.Models.PeepholeUser,
 
     url: app.rootURL
-
   });
-
 
 }());

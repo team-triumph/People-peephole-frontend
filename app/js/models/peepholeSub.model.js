@@ -5,11 +5,11 @@
   app.Models.Subs = Backbone.Model.extend({
 
 
-    defaults {
+    // defaults {
 
-      url: ''
+    //   url: ''
 
-    }
+    // }
 
 
   });

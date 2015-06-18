@@ -4,8 +4,6 @@
 
   app.Models.PeepholeUser = Backbone.Model.extend({
 
-    url : app.rootURL + '/users/register/'
-
     defaults: {
       username: '',
       first_name: '',

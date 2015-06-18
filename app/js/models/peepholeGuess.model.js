@@ -5,13 +5,14 @@
     app.Models.Guess = Backbone.Model.extend({
 
 
-        defaults {
+        // defaults {
 
-          user_id: '',
-          post_id: '',
-          guess: '',
-          point: ''
-        }
+        //   user_id: '',
+        //   post_id: '',
+        //   guess: '',
+        //   point: ''
+        // }
+
     });
 
 }());
