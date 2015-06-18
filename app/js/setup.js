@@ -16,7 +16,7 @@
   $.ajaxSetup({
 
     headers: {
-      "Authorization" : "12345" // whatever value is stored in the cookie
+      "Access-Token" :  "12345"  //whatever value is stored in the cookie
     }
 
   });
@@ -24,3 +24,6 @@
 
 
 }());
+
+
+// users/register url for registration view

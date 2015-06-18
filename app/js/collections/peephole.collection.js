@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Collection.Peephole = new Backbone.Collection.extend ({
+  app.Collections.Peephole = new Backbone.Collection.extend ({
 
     model: app.Models.Peephole,
 

@@ -1,5 +1,13 @@
-console.log('This is cool!');
+;(function (){
 
-$('.container').html(template.example({
-  value: 'Hello, World!!'
-}));
+  'use strict';
+
+  var allPeephole = new app.Collections.Peephole();
+
+    allPeephole.fetch().done( function (){
+      collection: allPeephole
+    })
+
+    Backbone.history.start();
+
+}());
