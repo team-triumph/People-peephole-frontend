@@ -24,6 +24,8 @@ initialize: function  (options) {
 
   var args = options || {};
 
+  this.collection = app.Collections.Post;
+
   this.render();
   $('.container').html(this.el);
 
@@ -42,6 +44,7 @@ render: function (){
 
   var p = new app.Models.Post({
 
+    // needs stuff
 
   });
 
