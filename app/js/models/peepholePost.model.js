@@ -1,6 +1,6 @@
 ;(function (){
 
-  'use strict'
+  'use strict';
 
     app.Models.Posts = Backbone.Model.extend({
 
