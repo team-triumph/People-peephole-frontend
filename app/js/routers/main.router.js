@@ -10,6 +10,7 @@
     routes: {
       '' : 'homepage',
       'login' : 'loginPage',
+      'register' : 'registerPage',
       'guess/:id' : 'guessPage',
       'submit' : 'submitPage'
 
