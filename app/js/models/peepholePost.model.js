@@ -4,14 +4,14 @@
 
     app.Models.Posts = Backbone.Model.extend({
 
-        defaults{
+        // defaults{
 
-          image: '',
-          user_id: '',
-          answer: '',
-          complete: false
+        //   image: '',
+        //   user_id: '',
+        //   answer: '',
+        //   complete: false
 
-        }
+        // }
 
     });
 

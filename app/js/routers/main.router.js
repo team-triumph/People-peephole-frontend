@@ -14,7 +14,7 @@
       'guess/:id' : 'guessPage',
       'submit' : 'submitPage'
 
-    }
+    },
 
     registerPage: function () {
       new app.Views.RegisterView();
