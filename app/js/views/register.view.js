@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Views.Reegister = new Backbone.Views.extend({
+  app.Views.RegisterView = new Backbone.Views.extend({
 
     className: 'register',
 
