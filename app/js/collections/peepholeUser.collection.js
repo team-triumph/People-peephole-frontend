@@ -4,9 +4,9 @@
 
   app.Collections.Peephole = new Backbone.Collection.extend ({
 
-    model: app.Models.Peephole,
+    model: app.Models.PeepholeUser,
 
-    url: app.rootURL
+    url: app.rootURL + '/user/register'
 
   });
 
