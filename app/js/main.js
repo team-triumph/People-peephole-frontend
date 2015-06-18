@@ -7,7 +7,7 @@
 
     allPeephole.fetch().done( function (){
       collection: allPeephole
-    })
+    });
 
     Backbone.history.start();
 
