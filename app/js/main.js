@@ -3,7 +3,7 @@
 
   'use strict';
 
-  var allPeephole = new app.Collections.Peephole();
+  var allPeephole = new app.Collections.User();
 
     allPeephole.fetch().done( function (){
       app.mainrouter = app.Routers.MainRouter({

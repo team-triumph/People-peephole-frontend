@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Views.RegisterView = new Backbone.Views.extend({
+  app.Views.RegisterView = new Backbone.View.extend({
 
     className: 'register',
 
@@ -33,13 +33,14 @@
           password = form.find('#password').val();
     }
 
-      var user = new app.Models.PeepholeUser ({
+      var user = new app.Models.User ({
         firstName: firstName,
         lastName: lastName,
         email: email,
         password: password
       });
 
+      // $.post //
       this.collection.add(user).save().success( function (){
         self.render();
       });
