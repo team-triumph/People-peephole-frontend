@@ -2,11 +2,15 @@
 
   'use strict';
 
-  app.Collections.User = new Backbone.Collection.extend ({
+  app.Collections.User = Backbone.Collection.extend ({
 
     model: app.Models.User,
 
-    url: app.rootURL //+ '/user/register'
+    url: app.rootURL,//+ '/user/register'
+
+    parse: function(data){
+      return data.post;
+     }
 
   });
 

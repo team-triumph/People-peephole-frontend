@@ -9,11 +9,13 @@
     allPeephole.fetch().success( function (){
       app.mainRouter = new app.Routers.MainRouter({
         collection: allPeephole
+      });
+
+      console.log(allPeephole);
+
+      Backbone.history.start();
+
     });
-
-    Backbone.history.start();
-
- });
 
 
 

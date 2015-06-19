@@ -1,4 +1,4 @@
-
+;(function (){
 
   'use strict';
 
@@ -21,11 +21,15 @@
       $('.container').html(this.el);
     },
 
-    render: function(event){
+    render: function(){
 
+      this.$el.html(this.template);
+    },
+
+    addUser: function (event){
       event.preventDefault();
 
-      $('#userInfo').on('submit', function(e){
+      $('#addUser').on('submit', function(e){
 
         e.preventDefault();
 
@@ -47,9 +51,11 @@
 
        });
 
-      });
+    });
 
   }
+
+
 
 });
 

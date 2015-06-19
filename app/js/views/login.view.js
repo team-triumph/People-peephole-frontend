@@ -2,14 +2,14 @@
 
 'use strict';
 
-app.Views.Login = Backbone.View.extend()({
+app.Views.Login = Backbone.View.extend({
 
   className: 'login',
 
 
   events: {
 
-    'submit #logIn' : 'addLogin'
+    'submit #logIn' : 'addLogin',
     'click #rout2Reg' : 'addReg'
 
   },

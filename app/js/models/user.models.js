@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Models.User = new Backbone.Model.extend ({
+  app.Models.User = Backbone.Model.extend ({
 
   });
 
