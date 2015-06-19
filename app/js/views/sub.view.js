@@ -34,7 +34,7 @@ $('.container').html(this.el);
 
 render: function () {
 
- this.$el.html(this.template({ sub: this.collection.toJSON() }));
+ this.$el.html(this.template);
 
 }
 
