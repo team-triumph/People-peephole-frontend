@@ -6,7 +6,7 @@
 
     model: app.Models.Guess,
 
-    url: app.rootURL
+    url: app.rootURL //+ path
   });
 
 }());

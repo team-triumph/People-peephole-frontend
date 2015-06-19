@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Views.RegisterView = new Backbone.View.extend({
+  app.Views.Register = new Backbone.View.extend({
 
     className: 'register',
 
@@ -25,27 +25,32 @@
 
       event.preventDefault();
 
-      var self = this,
-          form = form.find('#userInfo').val(),
-          firstName = form.find('#userFirstName').val();
-          lastName =form.find('#userLastName').val();
-          email = form.find('#email').val();
-          password = form.find('#password').val();
-    }
+      $('#userInfo').on('submit', function(e){
 
-      var user = new app.Models.User ({
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: password
+        e.preventDefault();
+
+        var user = {
+          firstName: $('#userFirstName').val(),
+          lastName: $('#userLastName').val(),
+          email: $('#email').val(),
+          password: $('#password').val()
+       };
+
+       var userInstance = new app.Models.User(user);
+
+       allPeephole.add(userInstance)
+
+       $.post('tiy-515.herokuapp.com/collections/people_peephole', userInstance.toJSON()).success( function (data){
+
+        Cookies.set('access_token', data.access_token);
+        Cookies.set('username', data.username);
+
+       });
+
       });
 
-      // $.post //
-      this.collection.add(user).save().success( function (){
-        self.render();
-      });
+  }
 
-
-  });
+});
 
 }());
