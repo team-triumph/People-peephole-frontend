@@ -13,7 +13,7 @@ app.Views.Post = Backbone.View.extend({
 
   events: {
 
-   'click #addPost' : 'addPost'
+   'click #addPost' : 'addPost',
    'submit #addNewPic' : 'addNewPic'
 
   },

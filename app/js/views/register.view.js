@@ -1,3 +1,5 @@
+;(function () {
+
 
 
   'use strict';
@@ -25,7 +27,7 @@
 
       event.preventDefault();
 
-      $('#userInfo').on('submit', function(e){
+      $('#addUserInfo').on('submit', function(e){
 
         e.preventDefault();
 

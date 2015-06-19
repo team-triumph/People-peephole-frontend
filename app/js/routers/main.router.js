@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Routers.MainRouter = new Backbone.Router.extend({
+  app.Routers.MainRouter = Backbone.Router.extend({
     initialize: function(options){
 
       var args= options || {};

@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Models.Post = new Backbone.Model.extend ({
+  app.Models.Post =  Backbone.Model.extend ({
 
   });
 
