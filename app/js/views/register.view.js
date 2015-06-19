@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Views.Register = new Backbone.View.extend({
+  app.Views.Register = Backbone.View.extend({
 
     className: 'register',
 
@@ -23,7 +23,7 @@
 
     render: function(){
 
-      this.$el.html(this.template);
+      this.$el.html(this.template); //({ user: this.collection.toJSON() })
     },
 
     addUser: function (event){
@@ -34,8 +34,10 @@
         e.preventDefault();
 
         var user = {
-          firstName: $('#userFirstName').val(),
-          lastName: $('#userLastName').val(),
+          firstName: $('#firstName').val(),
+          lastName: $('#lastName').val(),
+          userName: $('#userName').val(),
+
           email: $('#email').val(),
           password: $('#password').val()
        };
@@ -44,13 +46,14 @@
 
        allPeephole.add(userInstance)
 
+       this.collection.add(userInstance).save.success( function (){
+
        $.post('https://aqueous-brushlands-9148.herokuapp.com/', userInstance.toJSON()).success( function (data){
 
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
-
        });
-
+      });
     });
 
   }

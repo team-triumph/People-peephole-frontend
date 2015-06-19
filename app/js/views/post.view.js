@@ -34,7 +34,7 @@ initialize: function  (options) {
 
 render: function (){
 
-  this.$el.html(this.template({ post: this.collection.toJSON() }));
+  this.$el.html(this.template); //({ post: this.collection.toJSON() })
 },
 
 
