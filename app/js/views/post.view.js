@@ -53,7 +53,7 @@ render: function (){
 
   var p = new app.Models.Post({
 
-    var self = this;
+    // var self = this;
 
 
   });

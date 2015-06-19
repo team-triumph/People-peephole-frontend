@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Collections.Guess = new Backbone.Collection.extend ({
+  app.Collections.Guess = Backbone.Collection.extend ({
 
     model: app.Models.Guess,
 

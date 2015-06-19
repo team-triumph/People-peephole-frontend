@@ -1,10 +1,12 @@
+<<<<<<< HEAD
 ;(function () {
+
 
 
 
   'use strict';
 
-  app.Views.Register = new Backbone.View.extend({
+  app.Views.Register =  Backbone.View.extend({
 
     className: 'register',
 
@@ -14,7 +16,7 @@
       'submit #addUser' : 'addUser'
     },
 
-    initialize : function (options){
+    initialize: function (options){
       var args = options || {};
 
       this.collection = args.collection;
@@ -23,11 +25,17 @@
       $('.container').html(this.el);
     },
 
-    render: function(event){
+    render: function(){
 
+      this.$el.html(this.template);
+    },
+
+    addUser: function (event){
       event.preventDefault();
 
-      $('#addUserInfo').on('submit', function(e){
+
+      $('#addUser').on('submit', function(e){
+
 
         e.preventDefault();
 
@@ -49,9 +57,11 @@
 
        });
 
-      });
+    });
 
   }
+
+
 
 });
 

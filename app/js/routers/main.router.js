@@ -19,7 +19,7 @@
     },
 
     registerPage: function () {
-      new app.Views.Register();
+      //new app.Views.Register();
       // collection = app.Collections.User;
     }
 
