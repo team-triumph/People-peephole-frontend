@@ -35,7 +35,9 @@ initialize: function  (options) {
 
 render: function (){
 
-  this.$el.html(this.template());
+
+  this.$el.html(this.template); //({ post: this.collection.toJSON() })
+
 },
 
 
