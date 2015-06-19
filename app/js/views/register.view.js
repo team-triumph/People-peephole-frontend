@@ -34,9 +34,9 @@
         e.preventDefault();
 
         var user = {
-          firstName: $('#firstName').val(),
-          lastName: $('#lastName').val(),
-          userName: $('#userName').val(),
+          first_name: $('#firstName').val(),
+          last_name: $('#lastName').val(),
+          username: $('#userName').val(),
 
           email: $('#email').val(),
           password: $('#password').val()
@@ -44,11 +44,9 @@
 
        var userInstance = new app.Models.User(user);
 
-       allPeephole.add(userInstance)
-
        this.collection.add(userInstance).save.success( function (){
 
-       $.post('https://aqueous-brushlands-9148.herokuapp.com/', userInstance.toJSON()).success( function (data){
+       $.post('https://aqueous-brushlands-9148.herokuapp.com//users/register', userInstance.toJSON()).success( function (data){
 
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
