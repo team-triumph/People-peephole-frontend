@@ -12,7 +12,7 @@
       'submit #addUser' : 'addUser'
     },
 
-    initialize : function (options){
+    initialize: function (options){
       var args = options || {};
 
       this.collection = args.collection;
