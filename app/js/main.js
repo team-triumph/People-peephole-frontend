@@ -16,12 +16,13 @@
   });
 
 
-  // app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-  //   if (app.isLoggedIn) {
-  //     console.log('Yep');
-  //   } else {
-  //     console.log('Nope');
-  //   }
+  app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+    if (app.isLoggedIn) {
+      console.log('Yep');
+    } else {
+      console.log('Nope');
+    }
+
 
 
 }());
