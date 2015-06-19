@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ;(function () {
 
 
@@ -27,7 +27,9 @@
 
     render: function(){
 
-      this.$el.html(this.template);
+
+
+      this.$el.html(this.template); //({ register: this.collection.toJSON() }));
     },
 
     addUser: function (event){

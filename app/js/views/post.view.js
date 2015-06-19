@@ -11,6 +11,8 @@ app.Views.Post = Backbone.View.extend({
 
   className: 'post',
 
+template: hbs.post,
+
   events: {
 
    'click #addPost' : 'addPost',
@@ -19,7 +21,6 @@ app.Views.Post = Backbone.View.extend({
   },
 
 
-template: hbs.post,
 
 initialize: function  (options) {
 
@@ -34,7 +35,7 @@ initialize: function  (options) {
 
 render: function (){
 
-  this.$el.html(this.template({ post: this.collection.toJSON() }));
+  this.$el.html(this.template());
 },
 
 
@@ -58,7 +59,7 @@ render: function (){
 
   });
 
-  this.collection.add(p).save.success( function (){
+  this.collection.add(p).save().success( function (){
     self.render();
   });
 

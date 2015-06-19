@@ -32,7 +32,7 @@ app.Views.Login = Backbone.View.extend({
   render: function (){
 
 
-    this.$el.html(this.template({ login: this.collection.toJSON() }));
+    this.$el.html(this.template);
 
 
   },

@@ -41,8 +41,8 @@ render: function () {
 // addSubPic: function(event) {
 
 
-  var self = this,
-  form = $(event.target)
+  // var self = this,
+  // form = $(event.target)
 
 //   event.preventDefault();
 
