@@ -13,7 +13,8 @@ app.Views.Post = Backbone.View.extend({
 
   events: {
 
-   'submit #addPost' : 'addPost'
+   'click #addPost' : 'addPost'
+   'submit #addNewPic' : 'addNewPic'
 
   },
 
@@ -37,14 +38,23 @@ render: function (){
 },
 
 
+  addNewPic: function(event) {
+
+    // needs function
+
+  },
+
   addPost: function (event) {
     // needs a function
 
 
+    event.preventDefault();
+
 
   var p = new app.Models.Post({
 
-    // needs stuff
+    var self = this;
+
 
   });
 
