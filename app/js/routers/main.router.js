@@ -4,7 +4,9 @@
 
   app.Routers.MainRouter = new Backbone.Router.extend({
     initialize: function(options){
-      this.collection = options.collections;
+
+      var args= options || {};
+      this.collection = args.collections;
     },
 
     routes: {

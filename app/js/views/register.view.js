@@ -23,9 +23,10 @@
 
     render: function(event){
 
-      event.preventDefault();
+      this.$el.html(this.template())
+    },
 
-      $('#userInfo').on('submit', function(e){
+    $('#userInfo').on('submit', function(e){
 
         e.preventDefault();
 
