@@ -2,9 +2,11 @@
 
   'use strict';
 
-  app.Router.MainRouter = Backbone.Router.extend({
+  app.Routers.MainRouter = new Backbone.Router.extend({
     initialize: function(options){
-      this.collection = options.collections;
+
+      var args= options || {};
+      this.collection = args.collections;
     },
 
     routes: {
@@ -17,8 +19,8 @@
     },
 
     registerPage: function () {
-      new app.Views.RegisterView();
-      collection = this.collection;
+      new app.Views.Register();
+      // collection = app.Collections.User;
     }
 
 
