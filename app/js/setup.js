@@ -10,7 +10,7 @@
   window.app.Routers = {};
 
   // Root URL
-  app.rootURL = 'tiy-515.herokuapp.com/collections/people_peephole';
+  app.rootURL = 'https://aqueous-brushlands-9148.herokuapp.com/';
 
 
   $.ajaxSetup({

@@ -40,7 +40,7 @@
 
        allPeephole.add(userInstance)
 
-       $.post('tiy-515.herokuapp.com/collections/people_peephole', userInstance.toJSON()).success( function (data){
+       $.post('https://aqueous-brushlands-9148.herokuapp.com/', userInstance.toJSON()).success( function (data){
 
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
