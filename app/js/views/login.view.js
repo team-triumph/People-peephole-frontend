@@ -40,7 +40,7 @@ app.Views.Login = Backbone.View.extend({
        event.preventDefault();
 
         var user = {
-          username: $('#userName').val(),
+          username: $('#username').val(),
           password: $('#password').val()
        };
 
