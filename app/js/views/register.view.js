@@ -30,22 +30,15 @@
     render: function(){
 
 
-
-
       this.$el.html(this.template); //({ register: this.collection.toJSON() }));
 
     },
-
-
-
-
 
 
     addUser: function (event){
 
 
       event.preventDefault();
-
 
         var user = {
           first_name: $('#firstName').val(),
@@ -55,6 +48,7 @@
           email: $('#email').val(),
           password: $('#password').val()
        };
+
 
        var userInstance = new app.Models.User(user);
 
@@ -78,4 +72,10 @@
 });
 
 }());
+
+
+
+
+
+
 
