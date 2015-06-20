@@ -6,16 +6,16 @@ app.Views.Login = Backbone.View.extend({
 
   className: 'login',
 
+  template: hbs.login,
 
   events: {
 
     'submit #logIn' : 'addLogin',
-    'click #rout2Reg' : 'addReg'
+
 
   },
 
 
-  template: hbs.login,
 
 
   initialize: function (options) {
@@ -48,11 +48,7 @@ app.Views.Login = Backbone.View.extend({
 
   },
 
-  addReg: function(event) {
 
-      //
-
-  }
 
 
 });

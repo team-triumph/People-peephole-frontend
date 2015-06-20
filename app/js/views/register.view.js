@@ -62,6 +62,8 @@
 
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
+        // app.MainRouter.navigate('', {trigger: true});
+
        });
       });
     });
