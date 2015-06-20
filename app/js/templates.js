@@ -18,7 +18,7 @@ this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.answer || (depth0 != null ? depth0.answer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer","hash":{},"data":data}) : helper)))
-    + "</button>\n</form>\n\n\n\n\n\n\n\n\n\n\n";
+    + "</button>\n</form>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -32,7 +32,7 @@ this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "<h1>People Peephole!</h1>\n\n<div id=\"pics\">\n  <h2>New Pictures</h2>\n\n\n  <div id=\"addPost\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "  </div>\n\n\n\n\n\n\n</div>\n<form id=\"addNewPic\">\n\n\n<button><a href=\"/#submit\">+ Add a Pic</a></button>\n\n\n</form>\n\n\n\n<div id=\"score\">\n\n\n  <div id=\"scoreBoard\">\n    <h3>High Scores</h3>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</div>\n  <button><a href=\"/#submit\">+ Add a Pic</a></button>\n";
+    + "  </div>\n\n\n\n\n\n\n</div>\n<form id=\"addNewPic\">\n\n\n\n\n</form>\n\n\n\n<div id=\"score\">\n\n\n  <div id=\"scoreBoard\">\n    <h3>High Scores</h3>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</div>\n  <button><a href=\"/#submit\">+ Add a Pic</a></button>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["register"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

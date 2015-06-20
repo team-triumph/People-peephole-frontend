@@ -7,7 +7,7 @@
 
 
       var args = options || {};
-      this.collection = args.collections;
+      this.collection = args.collection;
 
     },
 
