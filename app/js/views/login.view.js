@@ -10,7 +10,9 @@ app.Views.Login = Backbone.View.extend({
 
   events: {
 
+
     'submit #logIn' : 'addLogin',
+
 
 
   },
@@ -41,10 +43,27 @@ app.Views.Login = Backbone.View.extend({
 
   addLogin: function(event) {
 
-    event.preventDefault();
 
 
+       event.preventDefault();
 
+        var user = {
+          username: $('#username').val(),
+          password: $('#password').val()
+       };
+
+       var logInstance = new app.Models.User(user);
+
+       this.collection.add(logInstance);
+
+       $.post('https://aqueous-brushlands-9148.herokuapp.com/users/login', logInstance.toJSON()).success( function (data){
+          Cookies.set('access_token', data.user.access_token);
+          Cookies.set('username', data.user.username);
+          Cookies.set('id', data.user.id);
+
+          app.loggedIn = true;
+          app.mainRouter.navigate('', {trigger: true});
+       });
 
   },
 
