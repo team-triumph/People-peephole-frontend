@@ -9,7 +9,7 @@ app.Views.Login = Backbone.View.extend({
 
   events: {
 
-    'submit #logIn' : 'addLogin'
+    'submit #logDiv' : 'addLogin'
   },
 
 
@@ -20,7 +20,7 @@ app.Views.Login = Backbone.View.extend({
 
     var args = options || {};
 
-    this.collection = app.Collections.Login
+    this.collection = args.collection;
 
     this.render();
     $('.container').html(this.el);
@@ -39,12 +39,12 @@ app.Views.Login = Backbone.View.extend({
 
        event.preventDefault();
 
-        var user = {
+        var log = {
           username: $('#username').val(),
           password: $('#password').val()
        };
 
-       var logInstance = new app.Models.User(user);
+       var logInstance = new app.Models.User(log);
 
        this.collection.add(logInstance);
 

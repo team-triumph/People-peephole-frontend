@@ -43,6 +43,7 @@ addSubPic: function (event) {
     answer_1: $('answer_1').val(),
     answer_2: $('answer_2').val(),
     answer_3: $('answer_3').val(),
+    complete: false
   };
 
   var submitInstance = new app.Models.Post(submit);
