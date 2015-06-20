@@ -22,7 +22,7 @@ this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "\n\n<h2> Hello </h2>\n\n<form id=\"logDiv\">\n\n    <input type=\"text\" id=\"userName\" placeholder=\"Username\">\n\n\n    <input type=\"password\" id=\"password\" placeholder=\"password\">\n    <button id=\"login\">Login</button>\n    <br>\n     <br>\n    <button><a href=\"/#register\">Don't Have an Account? Sign Up!</a></button>\n\n</form>\n\n\n\n\n\n\n\n";
+    return "\n\n<h2> Hello </h2>\n\n<form id=\"logDiv\">\n\n    <input type=\"text\" id=\"userName\" placeholder=\"Username\">\n\n\n    <input type=\"password\" id=\"password\" placeholder=\"password\">\n    <button id=\"login\">Login</button>\n    <br>\n    <br>\n    <button><a href=\"/#register\">Sign Up!</a></button>\n\n</form>\n\n\n\n\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

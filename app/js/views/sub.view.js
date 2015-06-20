@@ -38,39 +38,42 @@ render: function () {
  this.$el.html(this.template); //({ sub: this.collection.toJSON() })
 
 
+
 },
 
-addSubPic: function (event) {
 
+addSubPic: function (event) {
   event.preventDefault();
 
-  var submit = {
-
+  var submit= {
     image: $('#image').val(),
     answer: $('#answer').val(),
-    answer_1: $('#answer_1').val(),
-    answer_2: $('#answer_2').val(),
-    answer_3: $('#answer_3').val(),
+    answer_1: $('answer_1').val(),
+    answer_2: $('answer_2').val(),
+    answer_3: $('answer_3').val(),
+    complete: false
   };
 
-var submitInstance =  new app.Models.Post(submit);
+  var submitInstance = new app.Models.Post(submit);
+
   this.collection.add(submitInstance);
 
+  $.post('https://aqueous-brushlands-9148.herokuapp.com/posts', submitInstance.toJSON()).success( function (){
+    app.mainRouter.navigate('', {trigger: true});
 
-    $.post('https://aqueous-brushlands-9148.herokuapp.com/posts', submitInstance.toJSON()).success( function (){
-
-      app.mainRouter.navigate('', {trigger: true});
-
-    });
-
-} //closes addSubPic
+  });
 
 
 
-}); //closes backboneviewextend
+} //closes addSubpic
 
 
-}());  //iife
+
+}); //closes Backbone.Views.extend
+
+
+}()); //closes iife
+
 
 
 
