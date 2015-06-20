@@ -48,7 +48,7 @@ app.Views.Login = Backbone.View.extend({
 
        this.collection.add(logInstance);
 
-       $.post('https://aqueous-brushlands-9148.herokuapp.com/users/register', logInstance.toJSON()).success( function (data){
+       $.post('https://aqueous-brushlands-9148.herokuapp.com/users/login', logInstance.toJSON()).success( function (data){
           Cookies.set('access_token', data.user.access_token);
           Cookies.set('username', data.user.username);
           Cookies.set('id', data.user.id);
