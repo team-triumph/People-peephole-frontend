@@ -56,7 +56,9 @@
 
        $.post('https://aqueous-brushlands-9148.herokuapp.com/users/register', userInstance.toJSON()).success( function (data){
           Cookies.set('access_token', data.user.access_token);
+
            Cookies.set('username', data.user.username);
+
           Cookies.set('id', data.user.id);
 
 
