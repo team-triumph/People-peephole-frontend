@@ -32,22 +32,38 @@ render: function () {
 
  this.$el.html(this.template); //({ sub: this.collection.toJSON() })
 
-}
+},
 
-// addSubPic: function(event) {
+addSubPic: function (event) {
+  event.preventDefault();
 
-//   event.preventDefault();
+  var submit= {
+    image: $('#image').val(),
+    answer: $('#answer').val(),
+    answer_1: $('answer_1').val(),
+    answer_2: $('answer_2').val(),
+    answer_3: $('answer_3').val(),
+  };
 
-//   var self = this,
-//   form = $(event.target),
+  var submitInstance = new app.Models.Post(submit);
 
-// }
+  this.collection.add(submitInstance);
+
+  $.post('https://aqueous-brushlands-9148.herokuapp.com/posts', submitInstance.toJSON()).success( function (){
+    app.mainRouter.navigate('', {trigger: true});
+
+  });
 
 
-});
+
+} //closes addSubpic
 
 
-}());
+
+}); //closes Backbone.Views.extend
+
+
+}()); //closes iife
 
 
 
