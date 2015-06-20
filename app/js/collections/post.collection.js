@@ -10,7 +10,6 @@
 
      parse: function(data){
       return data.post;
-      console.log(post);
      }
   });
 

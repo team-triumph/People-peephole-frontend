@@ -11,7 +11,7 @@
         collection: allPeephole
       });
 
-      console.log(allPeephole);
+      // console.log(allPeephole);
 
       app.loggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
 

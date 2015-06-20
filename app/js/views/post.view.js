@@ -11,15 +11,13 @@ app.Views.Post = Backbone.View.extend({
 
   className: 'post',
 
+  template: hbs.post,
+
   events: {
-
-   'click #addPost' : 'addPost',
-   'submit #addNewPic' : 'addNewPic'
-
+    'click #deletePost' : 'deletePost',
+    'click #guessPost/:id' : 'guessPost'
   },
 
-
-template: hbs.post,
 
 initialize: function  (options) {
 
@@ -35,35 +33,36 @@ initialize: function  (options) {
 render: function (){
 
   this.$el.html(this.template); //({ post: this.collection.toJSON() })
-},
+  // var self = this;
+  var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts/', function (post){
+    post = allPosts.responseJSON;
+    console.log(post);
+    // var x =
+    // var image = x.image;
+    // console.log(x);
+    // $('#addPost').html(image);
 
-
-  addNewPic: function(event) {
-
-    // needs function
+    });
 
   },
 
-  addPost: function (event) {
-    // needs a function
 
 
-    event.preventDefault();
+  // var allPosts = new app.Models.Post();
 
+  //      this.collection.get(allPosts);
 
-  var p = new app.Models.Post({
+  //      $.get('https://aqueous-brushlands-9148.herokuapp.com/posts').success( function (data){
+  //       var image = data.post.image;
+  //      });
 
-    // var self = this;
+  // deletePost: function (event){
 
+  // },
 
-  });
+  // guessPost: function (event){
 
-  this.collection.add(p).save.success( function (){
-    self.render();
-  });
-
-   }
-
+  // }
 });
 
 
