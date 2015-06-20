@@ -7,26 +7,16 @@
 
 
     allPeephole.fetch().success( function (){
-      app.mainRouter = new app.Routers.MainRouter({
+      app.mainRouter = new app.Routers.mainRouter({
         collection: allPeephole
       });
 
       console.log(allPeephole);
 
+      app.loggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+
       Backbone.history.start();
 
     });
-
-
-
-
-  app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-    if (app.isLoggedIn) {
-      console.log('Yep');
-    } else {
-      console.log('Nope');
-    }
-
-
 
 }());

@@ -2,11 +2,11 @@
 
   'use strict';
 
-  app.Routers.MainRouter = Backbone.Router.extend({
+  app.Routers.mainRouter = Backbone.Router.extend({
     initialize: function(options){
 
       var args= options || {};
-      this.collection = args.collections;
+      this.collection = args.collection;
     },
 
     routes: {
@@ -19,9 +19,13 @@
     },
 
     homePage: function () {
+      if (app.loggedIn === true){
       new app.Views.Post({
       collection: this.collection
     });
+    } else {
+      app.mainRouter.navigate('login', {trigger: true});
+    }
     },
 
     loginPage: function (){

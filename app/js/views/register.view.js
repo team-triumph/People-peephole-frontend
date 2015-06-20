@@ -9,7 +9,7 @@
     template: hbs.register,
 
     events: {
-      'submit #addUser' : 'addUser'
+      'submit #userInfo' : 'addUser'
     },
 
     initialize: function (options){
@@ -29,10 +29,6 @@
     addUser: function (event){
       event.preventDefault();
 
-      $('#addUser').on('submit', function(e){
-
-        e.preventDefault();
-
         var user = {
           first_name: $('#firstName').val(),
           last_name: $('#lastName').val(),
@@ -44,15 +40,16 @@
 
        var userInstance = new app.Models.User(user);
 
-       this.collection.add(userInstance).save.success( function (){
+       this.collection.add(userInstance);
 
-       $.post('https://aqueous-brushlands-9148.herokuapp.com//users/register', userInstance.toJSON()).success( function (data){
+       $.post('https://aqueous-brushlands-9148.herokuapp.com/users/register', userInstance.toJSON()).success( function (data){
+          Cookies.set('access_token', data.user.access_token);
+          // Cookies.set('username', data.user.username);
+          Cookies.set('id', data.user.id);
 
-        Cookies.set('access_token', data.access_token);
-        Cookies.set('username', data.username);
+          app.loggedIn = true;
+          app.mainRouter.navigate('', {trigger: true});
        });
-      });
-    });
 
   }
 
