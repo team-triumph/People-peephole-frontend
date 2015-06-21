@@ -6,11 +6,11 @@
 
     model: app.Models.Post,
 
-    url: app.rootURL,
+    url: app.rootURL + '/posts',
 
-    parse: function(data){
-      return data.post;
-     }
+    // parse: function(data){
+    //   return data.post;
+    //  }
 
   });
 
