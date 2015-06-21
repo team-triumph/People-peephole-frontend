@@ -43,7 +43,7 @@ this["hbs"]["post"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"mai
     var helper;
 
   return "\n<header>\n\n<h1>People Peephole!</h1>\n\n  <div id=\"scoreBoard\">\n    <h2>High Scores</h2>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</header>\n\n\n<div id=\"pics\">\n  <h3>New Pictures</h3>\n</div>\n\n\n<div id=\"addPost\">\n  <h3>Mother Fack</h3>\n  <img src=\""
-    + this.escapeExpression(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"image","hash":{},"data":data}) : helper)))
+    + this.escapeExpression(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
     + "\">\n</div>\n\n\n\n\n\n\n</div>\n<form id=\"addNewPic\">\n\n<button><a href=\"/#submit\">+ Add a Pic</a></button>\n\n</form>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};

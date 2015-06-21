@@ -26,11 +26,12 @@ initialize: function  (options) {
   var args = options || {};
 
   this.collection = args.collections;
+  this.allPosts = args.allPosts;
 
-  // this.render();
-  this.collection.fetch().success (function (){
-    this.render();
-  })
+  this.render();
+  // this.collection.fetch().success (function (){
+  //   this.render();
+  // })
 
   $('.container').html(this.el);
 
@@ -38,18 +39,20 @@ initialize: function  (options) {
 
 render: function (){
 
-  this.$el.html(this.template({ post: this.collection.toJSON() })); //
+  this.$el.html(this.template); // ({ post: this.collection.toJSON() })
 
-  // var self = this;
+  var self = this;
 
-  // var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
-  //   var data = allPosts.responseJSON;
-  //   }).done(function (data){
-  //     self.$el.html(self.template({ image: data.responseJSON}));
-  //     console.log(data);
-  //   });
+  var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
+    // var data = allPosts.responseJSON;
+    }).done(function (data){
+      var image = data.post[1].image;
+      self.$el.html(self.template({ image: data.responseJSON}));
+      console.log(data);
+      console.log(image);
+    });
 
-    // $('#addPost').html(this.template);
+    $('#addPost').html(this.template);
 
 // image: allPosts.responseJSON
 
