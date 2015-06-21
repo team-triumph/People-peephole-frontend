@@ -10,8 +10,8 @@
   window.app.Routers = {};
 
   // Root URL
-  app.rootURL = 'https://aqueous-brushlands-9148.herokuapp.com/';
-
+  // app.rootURL = 'https://aqueous-brushlands-9148.herokuapp.com/';
+  app.rootURL = 'http://tiy-515.herokuapp.com/collections/joyave_image_dummy'
 
   $.ajaxSetup({
 
