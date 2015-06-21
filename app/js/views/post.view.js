@@ -13,8 +13,9 @@ app.Views.Post = Backbone.View.extend({
 
   events: {
 
-   'click #addPost' : 'addPost',
-   'submit #addNewPic' : 'addNewPic'
+   'click, #deletePost' : 'deletePost',
+   'click #guessPost' : 'guessPost'
+
 
   },
 
@@ -32,40 +33,56 @@ initialize: function  (options) {
 
 },
 
+// render: function (){
+
+//   this.$el.html(this.template); //({ post: this.collection.toJSON() })
+// },
+
+
+
+
+//   var allPosts = new app.Models.Post();
+
+//   this.collection.add(allPosts);
+
+//   $.get('https://aqueous-brushlands-9148.herokuapp.com/users/register').success( function (data){
+
+
+
+//   });
+
+
 render: function (){
+ // $('#addPost').html(thiss.template);
 
-  this.$el.html(this.template); //({ post: this.collection.toJSON() })
-},
+ this.$el.html(this.template); //({ post: this.collection.toJSON() })
+ // var self = this;
+ var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
+   var x = allPosts.responseJSON.post;
 
+   console.log(x);
 
-  addNewPic: function(event) {
+   }).done ( function (data){
 
-    // needs function
+   // this.$el.html(this.template({addPost: allPosts.responseJSON}));
+   });
 
-  },
-
-  addPost: function (event) {
-    // needs a function
-
-
-    event.preventDefault();
-
-
-  var p = new app.Models.Post({
-
-    // var self = this;
+ },
 
 
-  });
 
-  this.collection.add(p).save.success( function (){
-    self.render();
-  });
 
-   }
+
+  deletePost: function (event) {
+
+
+
+   },
+
+
+
 
 });
-
 
 
 

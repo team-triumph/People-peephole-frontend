@@ -22,7 +22,7 @@ this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "\n\n\n\n\n<form id=\"logDiv\">\n    <input type=\"text\" id=\"username\" placeholder=\"User Name\">\n    <input type=\"password\" id=\"password\" placeholder=\"password\">\n    <button id=\"login\">Login</button>\n    <br>\n    <button><a href=\"/#register\">Sign Up!</a></button>\n</form>\n\n\n\n\n\n\n\n";
+    return "\n\n\n<h1>Login</h1>\n\n<form id=\"logDiv\">\n    <input type=\"text\" id=\"username\" placeholder=\"User Name\">\n    <input type=\"password\" id=\"password\" placeholder=\"password\">\n    <button id=\"login\">Login</button>\n    <br>\n    <br>\n    <button><a href=\"/#register\">Sign Up!</a></button>\n</form>\n\n\n\n\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -30,13 +30,13 @@ this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "\n<header>\n\n<h1>People Peephole!</h1>\n\n  <div id=\"scoreBoard\">\n    <h2>High Scores</h2>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</header>\n\n\n\n\n\n\n<div id=\"pics\">\n  <h3>New Pictures</h3>\n\n\n  <div id=\"addPost\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+  return "\n<header>\n\n<h1>People Peephole!</h1>\n\n  <div id=\"scoreBoard\">\n    <h2>High Scores</h2>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</header>\n\n\n\n\n\n\n  <h3>New Pictures</h3>\n<div id=\"pics\">\n\n\n  <div id=\"allPost\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.allPost : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </div>\n\n\n\n\n\n\n</div>\n<form id=\"addNewPic\">\n\n<button><a href=\"/#submit\">+ Add a Pic</a></button>\n\n</form>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["register"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<form id=\"userInfo\">\n  <input type=\"text\" id=\"firstName\" placeholder=\"First Name\">\n  <input type=\"text\" id=\"lastName\" placeholder=\"Last Name\">\n  <input type=\"text\" id=\"userName\" placeholder=\"User Name\">\n  <input type=\"email\" id=\"email\" placeholder=\"Email\">\n  <input type=\"password\" id=\"password\" placeholder=\"Password\">\n  <button id=\"addUser\">Add Me</button>\n  <br>\n  <button> <a href=\"/#login\">Already a user? Click here.</a></button>\n</form>\n\n";
+    return "\n\n\n<h1>Register</h1>\n\n<form id=\"userInfo\">\n  <input type=\"text\" id=\"firstName\" placeholder=\"First Name\">\n  <input type=\"text\" id=\"lastName\" placeholder=\"Last Name\">\n  <input type=\"text\" id=\"userName\" placeholder=\"User Name\">\n  <input type=\"email\" id=\"email\" placeholder=\"Email\">\n  <input type=\"password\" id=\"password\" placeholder=\"Password\">\n  <button id=\"addUser\">Add Me</button>\n  <br>\n  <br>\n  <button> <a href=\"/#login\">Already a user? Click here.</a></button>\n</form>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["sub"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
