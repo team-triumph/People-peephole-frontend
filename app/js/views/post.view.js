@@ -37,7 +37,7 @@ initialize: function  (options) {
 
 render: function (){
 
-   app.Collections.Post = this.collection;
+   // app.Collections.Post = this.collection;
 
   var self = this;
 
