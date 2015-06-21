@@ -39,9 +39,24 @@ initialize: function  (options) {
 
 render: function (){
 
+  // var postView = {
+  //   image: image,
+  //   answer: answer
+  // }
+
+  // console.log(postView);
+
+  // $.ajax({
+  //   url: 'https://aqueous-brushlands-9148.herokuapp.com/posts',
+  //   type: 'GET',
+  //   dataType: 'json',
+  //   data: postView,
+
+  // })
+
   this.$el.html(this.template); // ({ post: this.collection.toJSON() })
 
-  var self = this;
+  // var self = this;
 
   // var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
   //   var data = allPosts.responseJSON;
