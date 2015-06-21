@@ -45,8 +45,8 @@ render: function (){
     var data = allPosts.responseJSON;
     }).done(function (data){
       self.$el.html(self.template(data)); //{image: allPosts.responseJSON}
-      var image = data[1].image;
-      console.log(image);
+      var image = data[1].image; //tests the data object
+      console.log(image); //logs the image URL to confirm
     });
 
 
