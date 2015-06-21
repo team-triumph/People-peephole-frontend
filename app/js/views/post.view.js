@@ -29,9 +29,7 @@ initialize: function  (options) {
   this.allPosts = args.allPosts;
 
   this.render();
-  // this.collection.fetch().success (function (){
-  //   this.render();
-  // })
+
 
   $('.container').html(this.el);
 
@@ -39,68 +37,27 @@ initialize: function  (options) {
 
 render: function (){
 
-  this.$el.html(this.template); // ({ post: this.collection.toJSON() })
+   // ({ post: this.collection.toJSON() })
 
   var self = this;
 
-  // var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
-  //   var data = allPosts.responseJSON;
-  //   }).done(function (data){
-  //     var image = data.post[1].image;
-  //     self.$el.html(self.template(image));
-  //     console.log(self.$el);
-  //     console.log(self.$el.html);
-      // console.log(self.$el.html(self.template));
+  var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (){
+    var data = allPosts.responseJSON;
+    }).done(function (data){
+      self.$el.html(self.template(data)); //{image: allPosts.responseJSON}
+      var image = data[1].image;
+      console.log(image);
+    });
 
 
-      // console.log(data);
-      // console.log(image);
-    // });
-
-
-    // $('#addPost').html(this.template);
-
-// image: allPosts.responseJSON
-
-    // self.$el.html(self.template(image));
-    // data = allPosts.responseJSON.post;
-    // console.log(post);
-
-    // var image = post[0].image;
-    // console.log(image);
-    // $('#addPost').html(image);
-
-    // var data = allPosts.responseText;
-    // var jsonResponse = JSON.parse(data);
-    // console.log(jsonResponse);
+    $('#addPost').html(this.template());
 
 
   },
 
 
 
-  // var allPosts = new app.Models.Post();
-
-  //      this.collection.get(allPosts);
-
-  //      $.get('https://aqueous-brushlands-9148.herokuapp.com/posts').success( function (data){
-  //       var image = data.post.image;
-  //      });
-
-  // deletePost: function (event){
-
-  // },
-
-  // guessPost: function (event){
-
-  // }
 });
-
-
-
-
-
-
 
 
 }());
