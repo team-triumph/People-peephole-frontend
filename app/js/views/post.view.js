@@ -13,7 +13,7 @@ app.Views.Post = Backbone.View.extend({
 
   template: hbs.post,
 
-  imagesTemplate: hbs.imgs,
+  // imagesTemplate: hbs.imgs,
 
   events: {
     'click #deletePost' : 'deletePost',
@@ -25,32 +25,33 @@ initialize: function  (options) {
 
   var args = options || {};
 
-  this.collection = args.collection;
+  this.collection = args.collections;
 
-  this.render();
+  // this.render();
+  this.collection.fetch().success (function (){
+    this.render();
+  })
+
   $('.container').html(this.el);
 
 },
 
 render: function (){
 
-  // this.$el.html(this.template); //({ post: this.collection.toJSON() })
+  this.$el.html(this.template({ post: this.collection.toJSON() })); //
 
-  var self = this;
-
-  // $('.container').append('#addPost');
+  // var self = this;
 
   // var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
-    // var data = allPosts.responseJSON;
-    this.collection.fetch({"images": "url"});
-    console.log(images);
-    // var data = get(image);
-    // console.log(data);
-    // }).done(function (data){
-      // self.$el.html(self.template({ "image": "url"/* allPosts.responseJSON */ }));
-    // });
+  //   var data = allPosts.responseJSON;
+  //   }).done(function (data){
+  //     self.$el.html(self.template({ image: data.responseJSON}));
+  //     console.log(data);
+  //   });
 
-    // $('#addPost').html(this.imagesTemplate);
+    // $('#addPost').html(this.template);
+
+// image: allPosts.responseJSON
 
     // self.$el.html(self.template(image));
     // data = allPosts.responseJSON.post;

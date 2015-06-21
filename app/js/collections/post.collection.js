@@ -6,7 +6,7 @@
 
     model: app.Models.Post,
 
-    url: app.rootURL + "/posts",
+    url: app.rootURL,
 
     parse: function(data){
       return data.post;
