@@ -43,16 +43,21 @@ render: function (){
 
   var self = this;
 
-  var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
-    // var data = allPosts.responseJSON;
-    }).done(function (data){
-      var image = data.post[1].image;
-      self.$el.html(self.template({ image: data.responseJSON}));
-      console.log(data);
-      console.log(image);
-    });
+  // var allPosts = $.get('https://aqueous-brushlands-9148.herokuapp.com/posts', function (data){
+  //   var data = allPosts.responseJSON;
+  //   }).done(function (data){
+  //     var image = data.post[1].image;
+  //     self.$el.html(self.template(image));
+  //     console.log(self.$el);
+  //     console.log(self.$el.html);
+      // console.log(self.$el.html(self.template));
 
-    $('#addPost').html(this.template);
+
+      // console.log(data);
+      // console.log(image);
+    // });
+
+    // $('#addPost').html(this.template);
 
 // image: allPosts.responseJSON
 
