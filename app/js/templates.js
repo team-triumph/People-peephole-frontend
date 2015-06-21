@@ -21,18 +21,26 @@ this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
     + "</button>\n</form>\n\n\n\n\n\n\n\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
+this["hbs"]["imgs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "  <h3>Mother Fack</h3>\n  <img src=\""
+    + this.escapeExpression(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"image","hash":{},"data":data}) : helper)))
+    + "\">\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div id=\"addPost\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.allPosts : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</div>\n";
+},"useData":true});
+this["hbs"] = this["hbs"] || {};
 this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "\n\n\n\n\n<form id=\"logDiv\">\n    <input type=\"text\" id=\"username\" placeholder=\"User Name\">\n    <input type=\"password\" id=\"password\" placeholder=\"password\">\n    <button id=\"login\">Login</button>\n    <br>\n    <button><a href=\"/#register\">Sign Up!</a></button>\n</form>\n\n\n\n\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    return "";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1;
-
-  return "\n<header>\n\n<h1>People Peephole!</h1>\n\n  <div id=\"scoreBoard\">\n    <h2>High Scores</h2>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</header>\n\n\n<div id=\"pics\">\n  <h3>New Pictures</h3>\n</div>\n\n<div id=\"addPost\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.addPost : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>\n\n\n\n\n\n\n\n\n</div>\n<form id=\"addNewPic\">\n\n<button><a href=\"/#submit\">+ Add a Pic</a></button>\n\n</form>\n";
+this["hbs"]["post"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "\n<header>\n\n<h1>People Peephole!</h1>\n\n  <div id=\"scoreBoard\">\n    <h2>High Scores</h2>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</header>\n\n\n<div id=\"pics\">\n  <h3>New Pictures</h3>\n</div>\n\n\n\n\n\n\n\n\n</div>\n<form id=\"addNewPic\">\n\n<button><a href=\"/#submit\">+ Add a Pic</a></button>\n\n</form>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["register"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
