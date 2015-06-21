@@ -21,7 +21,7 @@
     homePage: function () {
       if (app.loggedIn === true){
       new app.Views.Post({
-      collection: this.collection
+      collection: app.Collections.Post
     });
     } else {
       app.mainRouter.navigate('login', {trigger: true});

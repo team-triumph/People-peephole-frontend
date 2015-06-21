@@ -19,28 +19,11 @@
   <h3>New Pictures</h3>
 </div>
 
-
-<div id="addPost">
-{{!-- {{#each allPosts}} --}}
-  <h3>Mother Fack</h3>
-  <img src="{{image_url}}">
-{{!-- {{/each}} --}}
-</div>
-
-
-
-{{!-- <div id="pics">
-  <h3>New Pictures</h3>
-
-  {{#each addPost}}
+{{#each image}}
   <div id="addPost">
-    <img src="{{image}}">
-
+    <a href="#" data-id="{{id}}"><img src="{{image}}"></a>
   </div>
-
-  {{/each}} --}}
-
-
+{{/each}}
 
 </div>
 <form id="addNewPic">
