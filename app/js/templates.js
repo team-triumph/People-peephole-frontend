@@ -44,7 +44,7 @@ this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "<div class=\"card\">\n  <div class=\"card-image waves-effect waves-block waves-light\">\n    <img class=\"activator\" src=\""
     + alias3(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image","hash":{},"data":data}) : helper)))
-    + "\">\n  </div>\n  <div class=\"card-content\">\n    <span class=\"card-title activator grey-text text-darken-4\">Have a guess at what this is?</span>\n    <p>Click the image to try.</p>\n  </div>\n  <div class=\"card-reveal\">\n    <span class=\"card-title grey-text text-darken-4\">Take your pick...</span>\n      <button id=\"guess\" class=\"answer true\">"
+    + "\">\n  </div>\n  <div class=\"card-content\">\n    <span class=\"card-title activator grey-text text-darken-4\">Have a guess at what this is?</span>\n    <span id=\"deleteCard\" class=\"deleteCard\">X</span>\n    <p>Click the image to try.</p>\n  </div>\n  <div class=\"card-reveal\">\n\n    <span class=\"card-title grey-text text-darken-4\">Take your pick...</span>\n      <button id=\"guess\" class=\"answer true\">"
     + alias3(((helper = (helper = helpers.answer || (depth0 != null ? depth0.answer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer","hash":{},"data":data}) : helper)))
     + "</button>\n      <button id=\"guess\" class=\"answer_1\">"
     + alias3(((helper = (helper = helpers.answer_1 || (depth0 != null ? depth0.answer_1 : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer_1","hash":{},"data":data}) : helper)))
@@ -56,7 +56,7 @@ this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "\n<header>\n\n<h1>People Peephole!</h1>\n\n  <div id=\"scoreBoard\">\n    <h2>High Scores</h2>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</header>\n\n\n<div id=\"pics\">\n  <h3>New Pictures</h3>\n</div>\n\n"
+  return "\n\n<header>\n\n<h1>People Peephole!</h1>\n\n  <div id=\"scoreBoard\">\n    <h2>High Scores</h2>\n    <ul>\n      <li></li>\n      <li></li>\n      <li></li>\n    </ul>\n  </div>\n</header>\n\n\n<div id=\"pics\">\n  <h3>New Pictures</h3>\n</div>\n\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n\n\n</div>\n<form id=\"addNewPic\">\n\n<button><a href=\"/#submit\">+ Add a Pic</a></button>\n\n</form>\n";
 },"useData":true});

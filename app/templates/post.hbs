@@ -1,4 +1,4 @@
-{{!-- do i need to link this in HTML? --}}
+
 
 <header>
 
@@ -26,9 +26,11 @@
   </div>
   <div class="card-content">
     <span class="card-title activator grey-text text-darken-4">Have a guess at what this is?</span>
+    <span id="deleteCard" class="deleteCard">X</span>
     <p>Click the image to try.</p>
   </div>
   <div class="card-reveal">
+
     <span class="card-title grey-text text-darken-4">Take your pick...</span>
       <button id="guess" class="answer true">{{answer}}</button>
       <button id="guess" class="answer_1">{{answer_1}}</button>
@@ -39,11 +41,6 @@
 {{/each}}
 
 
-{{!-- {{#each image}}
-  <div id="addPost">
-    <a href="#" data-id="{{id}}"><img src="{{image}}"></a>
-  </div>
-{{/each}} --}}
 
 </div>
 <form id="addNewPic">
