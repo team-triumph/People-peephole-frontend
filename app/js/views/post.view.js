@@ -71,7 +71,7 @@ render: function (){
     //   console.log('you putz')
     // };
 
-  }
+  },
 
 
 
