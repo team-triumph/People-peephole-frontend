@@ -44,15 +44,15 @@ this["hbs"]["post"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "<div class=\"card\">\n  <div class=\"card-image waves-effect waves-block waves-light\">\n    <img class=\"activator\" src=\""
     + alias3(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image","hash":{},"data":data}) : helper)))
-    + "\">\n  </div>\n  <div class=\"card-content\">\n    <span class=\"card-title activator grey-text text-darken-4\">Have a guess at what this is?</span>\n    <p>Click the image to try.</p>\n  </div>\n  <div class=\"card-reveal\">\n      <span class=\"card-title grey-text text-darken-4\">Take your pick...</span>\n\n        <button =\"answer\">"
+    + "\">\n  </div>\n  <div class=\"card-content\">\n    <span class=\"card-title activator grey-text text-darken-4\">Have a guess at what this is?</span>\n    <p>Click the image to try.</p>\n  </div>\n  <div class=\"card-reveal\">\n    <span class=\"card-title grey-text text-darken-4\">Take your pick...</span>\n      <button id=\"guess\" class=\"answer true\">"
     + alias3(((helper = (helper = helpers.answer || (depth0 != null ? depth0.answer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer","hash":{},"data":data}) : helper)))
-    + "</button>\n        <button =\"answer_1\">"
+    + "</button>\n      <button id=\"guess\" class=\"answer_1\">"
     + alias3(((helper = (helper = helpers.answer_1 || (depth0 != null ? depth0.answer_1 : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer_1","hash":{},"data":data}) : helper)))
-    + "</button>\n        <button =\"answer_2\">"
+    + "</button>\n      <button id=\"guess\" class=\"answer_2\">"
     + alias3(((helper = (helper = helpers.answer_2 || (depth0 != null ? depth0.answer_2 : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer_2","hash":{},"data":data}) : helper)))
-    + "</button>\n        <button =\"answer_3\">"
+    + "</button>\n      <button id=\"guess\" class=\"answer_3\">"
     + alias3(((helper = (helper = helpers.answer_3 || (depth0 != null ? depth0.answer_3 : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer_3","hash":{},"data":data}) : helper)))
-    + "</button>\n\n  </div>\n</div>\n";
+    + "</button>\n  </div>\n</div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 

@@ -17,7 +17,7 @@ app.Views.Post = Backbone.View.extend({
 
   events: {
     'click #deletePost' : 'deletePost',
-    'click #guessPost/:id' : 'guessPost'
+    'click #guess' : 'guessPost'
   },
 
 
@@ -50,8 +50,26 @@ render: function (){
     })
 
     $('#addPost').html(this.template()); //{ image: this.collection.toJSON() })
-
   },
+
+  guessPost: function (e){
+
+    e.preventDefault;
+
+    if($('#guess').hasClass('true')){
+      console.log('Hello');
+    }
+
+    // var x = $('button').hasClass('true');
+    // console.log(x);
+
+    // if( x === true) {
+    //   console.log ('double fuck yeah!');
+    // } else {
+    //   console.log('you putz')
+    // };
+
+  }
 
 
 
