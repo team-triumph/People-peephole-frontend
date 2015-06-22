@@ -16,7 +16,7 @@ app.Views.Post = Backbone.View.extend({
   // imagesTemplate: hbs.imgs,
 
   events: {
-    'click #deletePost' : 'deletePost',
+    'click #deleteCard' : 'deleteCard',
     'click #guessPost/:id' : 'guessPost'
   },
 
@@ -52,6 +52,29 @@ render: function (){
     $('#addPost').html(this.template()); //{ image: this.collection.toJSON() })
 
   },
+
+
+
+
+deleteCard: function (event){
+
+  event.preventDefault();
+
+  app.Collections.Post = this.collection;
+  var button = event.target;
+  var eyeDee = $(button).data('post');
+  var cardKill = this.collection.get(eyeDee);
+
+  if(window.confirm("Are you sure you want to delete this card?")) {
+    cardKill.destroy().success( function () {
+
+      app.mainRouter.navigate('', {trigger: true});
+
+    });
+  }
+
+}
+
 
 
 
