@@ -40,9 +40,9 @@ addSubPic: function (event) {
   var submit= {
     image: $('#image').val(),
     answer: $('#answer').val(),
-    answer_1: $('answer_1').val(),
-    answer_2: $('answer_2').val(),
-    answer_3: $('answer_3').val(),
+    answer_1: $('#answer_1').val(),
+    answer_2: $('#answer_2').val(),
+    answer_3: $('#answer_3').val(),
     complete: false
   };
 
